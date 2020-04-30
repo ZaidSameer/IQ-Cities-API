@@ -11,11 +11,15 @@ const city = [
     name: "النجف",
     towns: ["الكوفة", "المشخاب", "المناذرة"],
   },
+  {
+    By: "Mohammed Jawad",
+    Tools: "Nodejs And Express",
+    DeployTo: "Heroku",
+  },
 ];
 
 app.get("/city", (req, res) => {
   res.json(city);
-  //   res.send("Hola its working");
 });
 
 const PORT = process.env.PORT || 4000;
