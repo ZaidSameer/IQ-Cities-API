@@ -1,13 +1,13 @@
 const express = require("express");
 const app = express();
 const city = require("./city");
+const path = require("path");
 
 app.get("/city", (req, res) => {
   res.json(city);
 });
-app.get("/", (req, res) => {
-  res.send(`<h1>Welcome to Iraq Cities REST API</h1>`);
-});
+
+app.use(express.static(path.join(__dirname, "public")));
 
 const PORT = process.env.PORT || 4000;
 
