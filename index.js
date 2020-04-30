@@ -3,12 +3,12 @@ const app = express();
 const city = [
   {
     id: 1,
-    name: "baghdad",
+    name: "بغداد",
     towns: ["الكرادة", "المنصور", "الشعب"],
   },
   {
     id: 2,
-    name: "najaf",
+    name: "النجف",
     towns: ["الكوفة", "المشخاب", "المناذرة"],
   },
 ];
