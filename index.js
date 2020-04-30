@@ -1,25 +1,12 @@
 const express = require("express");
 const app = express();
-const city = [
-  {
-    id: 1,
-    name: "بغداد",
-    towns: ["الكرادة", "المنصور", "الشعب"],
-  },
-  {
-    id: 2,
-    name: "النجف",
-    towns: ["الكوفة", "المشخاب", "المناذرة"],
-  },
-  {
-    By: "Mohammed Jawad",
-    Tools: "Nodejs And Express",
-    DeployTo: "Heroku",
-  },
-];
+const city = require("./city");
 
 app.get("/city", (req, res) => {
   res.json(city);
+});
+app.get("/", (req, res) => {
+  res.send(`<h1>Welcome to Iraq Cities REST API</h1>`);
 });
 
 const PORT = process.env.PORT || 4000;
