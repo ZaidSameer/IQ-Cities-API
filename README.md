@@ -1,6 +1,8 @@
 # IQ-Cities-API
 This API is listing the Iraq provinces and cities in Arabic , and it's free to use 😃 
-the tool used in this project is 
+
+The tools used in this project is : 
+
 Express JS 
   For handling the routes and directing to the right files
 Node Js 
