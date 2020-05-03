@@ -1,13 +1,20 @@
-const express = require("express");
+const express = require('express');
 const app = express();
-const city = require("./city");
-const path = require("path");
+const city = require('./city');
+const path = require('path');
 
-app.get("/city", (req, res) => {
+app.use((res, req, next) => {
+  res.header('Access-Control-Allow-Origin', '*');
+  res.header('Access-Control-Allow-Methods', 'GET');
+  res.header('Access-Control-Allow-Headers', 'Content-Type');
+  next();
+});
+
+app.get('/city', (req, res) => {
   res.json(city);
 });
 
-app.use(express.static(path.join(__dirname, "public")));
+app.use(express.static(path.join(__dirname, 'public')));
 
 const PORT = process.env.PORT || 4000;
 
